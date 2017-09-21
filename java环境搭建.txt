@@ -1,0 +1,55 @@
+
+#### JAVA环境搭建
+
+参考文档： http://www.cnblogs.com/wangdy/p/5332772.html
+
+java是由Sun公司于1995年推出的，其实想想距离现在(2016)年也不过20几年的时间，并不是深不可测、遥不可及的，所以首先排除恐惧，其实不难。
+
+java分三个体系：
+
+   # java SE -- S就是Standard，所以是标准版
+
+   # java EE -- E就是Enterprise，所以是企业版
+
+   # java ME -- M就是Micro，所以是微型版
+
+   
+1.java环境搭建
+
+　　搭建java环境，首先要面临的是这两个家伙：JDK和JRE
+
+　　#JDK -- Java Development Kit，就是一个软件的开发工具包SDK；
+
+　　#JRE -- Java Runtime Environment，就是一个java程序的运行环境；
+
+　　所以还是挺好理解：要开发java，首选使用JDK吧，当然你可以选择其他的，另外如果你想运行java程序，肯定离不开JRE了，这俩家伙就是干这个活的。
+
+　　分清了TA俩的作用，其实不难明白，如果你不开发，只是运行java，那么你只需要安装JRE就可以了。
+
+    1.1 下载JDK（参考菜鸟教程网）
+    
+    1.2  配置环境变量 JAVA_Home、Path、CLASS_Path  测试JAvA是否成功 java -version、java、javac
+    
+    配置如下：
+
+    变量名：JAVA_HOME
+    变量值：D:\Program Files\Java\jdk1.7.0 [这是我的安装路径，一定换成你的]
+    变量名：CLASSPATH
+    变量值：.;%JAVA_HOME%\lib; //记得前面有个"."
+    变量名：Path  [一般的电脑，都有这个变量名，你只需要编辑就可以]
+    变量值：%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;
+    
+    win+r:  打开cmd命令窗口：输入:java  或  java -version 或 javac 都可以，显示如下，说明你成功的迈出了第一步：
+    
+    
+2.tomcat
+
+    你知道window下的IIS吗？知道就好办了， 不知道？ 好吧，Tomcat是一个应用服务器，是开发和调试JSP 程序的首选。
+
+    下载Tomcat（参考菜鸟）
+
+    我建议各位选择8.0,因为截至到目前（2016-3）Eclipse对9.0配置起来很麻烦，但对8.0支持很好。
+    
+    下载后解压，不用安装。
+
+    有一点一定注意：必须配置好JDK/JRE的环境变量，否则Tomcat是无法运行的，因为Tomcat是java编写的，需要环境。
